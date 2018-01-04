@@ -1,4 +1,4 @@
-% Matthew Racine
+% Matt Racine
 
 \documentclass[11pt,oneside]{article}
 \usepackage{geometry}
@@ -16,7 +16,7 @@
 % Name and contact information
 \newcommand{\name}{Matthew Racine}
 \newcommand{\addr}{1919 Muller Road, Sun Prairie, WI 53590}
-\newcommand{\phone}{(608) 729-5859}
+\newcommand{\phone}{}
 \newcommand{\email}{matt@mattracine.com}
 
 
@@ -25,29 +25,29 @@
 
 % This defines how the name looks
 \newcommand{\bigname}[1]{
-	\begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
+    \begin{center}\fontfamily{phv}\selectfont\Huge\scshape#1\end{center}
 }
 
 % A ressection is a main section (<H1>Section</H1>)
 \newenvironment{ressection}[1]{
-	\vspace{4pt}
-	{\fontfamily{phv}\selectfont\Large#1}
-	\begin{itemize}
-	\vspace{3pt}
+    \vspace{4pt}
+    {\fontfamily{phv}\selectfont\Large#1}
+    \begin{itemize}
+    \vspace{3pt}
 }{
-	\end{itemize}
+    \end{itemize}
 }
 
 % A resitem is a simple list element in a ressection (first level)
 \newcommand{\resitem}[1]{
-	\vspace{-4pt}
-	\item \begin{flushleft} #1 \end{flushleft}
+    \vspace{-4pt}
+    \item \begin{flushleft} #1 \end{flushleft}
 }
 
 % A ressubitem is a simple list element in anything but a ressection (second level)
 \newcommand{\ressubitem}[1]{
-	\vspace{-1pt}
-	\item \begin{flushleft} #1 \end{flushleft}
+    \vspace{-1pt}
+    \item \begin{flushleft} #1 \end{flushleft}
 }
 
 % A resbigitem is a complex list element for stuff like jobs and education:
@@ -55,27 +55,27 @@
 %  Arg 2: Location
 %  Arg 3: Title and/or date range
 \newcommand{\resbigitem}[3]{
-	\vspace{-5pt}
-	\item
-	\textbf{#1} #2 \textit{#3}
+    \vspace{-5pt}
+    \item
+    \textbf{#1} #2 \textit{#3}
 }
 
 % This is a list that comes with a resbigitem
 \newenvironment{ressubsec}[3]{
-	\resbigitem{#1}{#2}{#3}
-	\vspace{-2pt}
-	\begin{itemize}
+    \resbigitem{#1}{#2}{#3}
+    \vspace{-2pt}
+    \begin{itemize}
 }{
-	\end{itemize}
+    \end{itemize}
 }
 
 % This is a simple sublist
 \newenvironment{reslist}[1]{
-	\resitem{\textbf{#1}}
-	\vspace{-5pt}
-	\begin{itemize}
+    \resitem{\textbf{#1}}
+    \vspace{-5pt}
+    \begin{itemize}
 }{
-	\end{itemize}
+    \end{itemize}
 }
 
 
@@ -96,19 +96,20 @@
 
 \vspace{8 pt}
 
-\begin{ressection}{Summary} 
-	\resitem{Driven computer professional who has a strong programming background and the ability to strategize and solve problems quickly.  Passionate about exploring and expanding to new technologies. Will always learn on his own to sharpen his craft and skills.}
+\begin{ressection}{Summary}
+    \resitem{Driven computer professional who has a strong programming background and the ability to strategize and solve problems quickly.  Passionate about exploring and expanding to new technologies. Will always learn on his own to sharpen his craft and skills.}
 \end{ressection}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Skills}
 
-	\resitem{\textbf{Operating Systems:} Linux (CentOS, Debian, Gentoo, Redhat), Mac OS X, UNIX (variants), Windows(Vista/7)}
-	\resitem{\textbf{Databases:} MySQL, Postgresql, Oracle 9i and 10g, SQL Server}
-	\resitem{\textbf{Programming:} C, C++, Java, \LaTeX, PHP, Perl, Python, (X)HTML, XML/XSD/WSDL, SOAP, JavaScript, PL/SQL}
-	\resitem{\textbf{Tools/Technologies/Frameworks:} Ajax, CVS, Git, SVN, Mercurial, Eclipse, Netbeans, Hibernate, SQL Developer, Apache, Nginx, Glassfish, Tomcat, jQuery, JBOSS, JDBC, JMS/MDB, JSON, Struts, Spring, Code Igniter, Zend, Dojo}
-	\resitem{\textbf{Passionate about :} git, bitbucket, github, Vim, HTML5, jQuery, Linux, postgres, Xmonad and Haskell}
+    \resitem{\textbf{Cloud Technologies:} Amazon Web Services (AWS): EC2, Lambda, S3, DynamoDB, CloudFormation, CloudWatch}
+    \resitem{\textbf{Operating Systems:} Linux (CentOS, Debian, Gentoo, Redhat, Mint), Mac OS X, UNIX (FreeBSD, OpenBSD), Windows}
+    \resitem{\textbf{Databases:} MySQL, PostgreSQL, Oracle 9i and 10g, SQL Server, SQLite}
+    \resitem{\textbf{Programming:} C, C++, Java, \LaTeX, PHP, Perl, Python, (X)HTML, XML/XSD/WSDL, SOAP, JavaScript, PL/SQL}
+    \resitem{\textbf{Tools/Technologies/Frameworks:} Ajax, Apache, CVS, Git, SVN, Mercurial, Eclipse, Netbeans, Maven, Hibernate, SQL Developer, J2EE, Nginx, Glassfish, Tomcat, jQuery, JBOSS, JDBC, JMS/MDB, JSON, Struts, Spring, Composer, CodeIgniter, Symfony, Zend, Dojo, Node.js, TypeScript}
+    \resitem{\textbf{Passionate about :} Git, Linux, PostgreSQL, Haskell, Machine Learning}
 
 \end{ressection}
 
@@ -116,78 +117,103 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Experience}
 
-	\begin{ressubsec}{Johnson Health Tech North America}{Cottage Grove, WI}{Web Developer: Mar 2013 -- Apr 2013}
-		\ressubitem{Technologies used: PHP, Symfony, Mysql, Apache, Doctrine, Zend-Forms, Zend-DB, jQuery, Ubuntu, Virtualbox } 
-		\ressubitem{Collaborate on a new application to help flesh out core use cases }
-		\ressubitem{Migrate new application from Zend-Db over to Doctrine: Code Refactoring}
-		\ressubitem{Bug fix and maintain internal web applications}
-	\end{ressubsec}
+    \begin{ressubsec}{American Family Insurance}{Madison, WI}{Software Engineer: June 2017 -- Dec 2017}
+      \ressubitem{\textit{Technologies used:} Amazon Web Services (AWS): specifically EC2, Lambda, S3, DynamoDB, CloudFormation and CloudWatch. Node.js, TypeScript, Python, Git, Serverless, localstack, Jenkins, Flask}
+        \ressubitem{Work in a small agile team and adhere to scrum and lean principles to aid team practices}
+        \ressubitem{Leveraging AWS to build Infrastructure as a Service(IaaS) as well as Functions as a Service(FaaS)}
+        \ressubitem{Aided the path of continuous integration, DevOps and automation for a new team and series of software experiments for innovation and driven groups}
+        \ressubitem{Implemented a Bayesian Network driven Chatbot for AmFam Agents}
+        \ressubitem{Build high-performance, high-traffic systems and services that scale to demand}
+    \end{ressubsec}
 
-	\begin{ressubsec}{Wolters Kluwer - ftwilliam.com}{Madison, WI}{Web Developer: Mar 2012 -- Sep 2012}
-		\ressubitem{Technologies used: Ajax, Dojo, Active.js, JQuery, HTML, CSS, Perl, MySql, Redhat Linux, Virtualbox, Mercurial}
-		\ressubitem{Maintain Web application for Form 5500 filing with the Department of Labor using web services}
-		\ressubitem{Develop form Edit Test verification via ajax to ensure DOL acceptance} 
-		\ressubitem{Implementation of updated schedules and attachments from IRS}
-	\end{ressubsec}
+    \begin{ressubsec}{The Weather Company - IBM}{Madison, WI}{Software Engineer: Nov 2016 -- May 2017}
+        \ressubitem{\textit{Technologies used:} Java, Python, Perl, Subversion, Git, CentOS, PostgreSQL, nginx, Apache NiFi, J2EE, XML/WSDL, Tomcat, MySQL, Maven, IntelliJ, PyCharm, RabbitMQ, Vagrant, Virtualbox }
+        \ressubitem{Small agile team focused on fast, scalable and fault tolerant services}
+        \ressubitem{Actively develop and maintain software for Energy load prediction}
+        \ressubitem{Energy load forecasts are part of the suite of solutions offered for energy traders as well as other data service subscriptions}
+        \ressubitem{Backend data ingestion services consume 24TB of data everyday from weather services and regional transmission organizations to produce accurate forecasts}
+        \ressubitem{Responsible for the delivery and operation of the energy load prediction services and systems}
+        \ressubitem{Use a wide array of tools and languages to refactor legacy products into a cloud platform}
+    \end{ressubsec}
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{ressubsec}{TCS Basys Controls}{Middleton, WI}{Junior Software Architect: June 2014 -- July 2016}
+        \ressubitem{\textit{Technologies used:} Java, PHP, JavaScript, Git, Mercurial, Debian, Node.js, JSON, C, PostgreSQL, Python, SQLite, lighttpd, Apache, J2EE, BACnet, XML/WSDL, SOAP, Tomcat, Spring, Maven, Eclipse}
+        \ressubitem{Designed and implemented a distributed routing service, alleviating a scaling issue, refactoring applications to be modular and allowing interopability with third party applications}
+        \ressubitem{Agile Development and architectural guidance to implement the BACnet/IP Protocol into an entirely new building automation gateway}
+        \ressubitem{Defined Developer Operations workflow to better address bugs, projects and time for added clarity of projects}
+        \ressubitem{Architected and implemented a BACnet Message Processor into Ubiquity Systems Data Stores to ensure data accuracy for realtime and long term persistent storage}
+        \ressubitem{Collaborated with Managed Services to provide better error resolution to aid customer support}
+    \end{ressubsec}
 
-	\begin{ressubsec}{HP Enterprise Services}{Madison, WI}{Web Developer: Jul 2010 -- Mar 2012}
-		\ressubitem{Technologies used: Ajax, JavaScript, HTML, CSS, PL/SQL, Oracle 10g, OC4J, Java, Glassfish, XML/XSD/XSL/WSDL, SOAP, Eclipse, JDBC, JBOSS, Hibernate, Struts/Spring, JSP, MDB/JMS, CVS and SVN}
-		\ressubitem{Develop and maintain web applications for Immunization Registry of Minnesota}
-		\ressubitem{Data replication and Data Aggregation for Data Warehousing} 
-		\ressubitem{Code refactoring to bring features from one registry to another}
-		\ressubitem{Implementation of new features and support of legacy systems}
-	\end{ressubsec}
+    \begin{ressubsec}{Home Health United}{Madison, WI}{Web Developer II: Nov 2013 -- May 2014}
+        \ressubitem{\textit{Technologies used:} PHP, MySQL, Apache, jQuery, Symfony, Composer, Python, CodeIgniter, WordPress, Windows Server, FreeBSD, Debian, Vagrant}
+        \ressubitem{Lead and unify software development for web technologies across multiple server environments}
+        \ressubitem{Implementation of Project Management Tools (JIRA)}
+        \ressubitem{Identify use cases and simplify concepts to Stakeholders}
+        \ressubitem{Manage Employee Application Access and Troubleshoot User Issues}
+    \end{ressubsec}
 
-	\begin{ressubsec}{Wellbe LLC}{Madison, WI}{Applications Developer: Mar 2010 -- May 2010}
-		\ressubitem{Technologies used: Ajax, PHP, MySQL, jQuery, json, CSS, SVN}
-		\ressubitem{Work in an agile, web start up company}
-		\ressubitem{Develop web based applications for customers}
-		\ressubitem{Maintain and implement solutions for current and future customers}
-	\end{ressubsec}	
-	
-	\begin{ressubsec}{Laker Software Inc.}{Sun Prairie, WI}{Software/Database Developer: Jan 2008--Dec 2009}
-		\ressubitem{Technologies used: PL/SQL, Oracle 9i and 10g , C, C++, VB5, CVS}
-		\ressubitem{Pharmacy claim transaction reconciliation with Centers for Medicare Services}
-		\ressubitem{Explanation of benefits preparation for Medicare members}
-		\ressubitem{Data conversion to accomodate new customers or plan setups}
-		\ressubitem{Insurance plan retroactivity reconciliation}
-		\ressubitem{Linux administration on production servers}
-	\end{ressubsec}
+    \begin{ressubsec}{Johnson Health Tech North America}{Cottage Grove, WI}{Web Developer: Mar 2013 -- Apr 2013}
+        \ressubitem{\textit{Technologies used:} PHP, Symfony, CodeIgniter, Composer, MySQL, Apache, Doctrine, Zend-Forms, Zend-DB, jQuery, Ubuntu, Virtualbox }
+        \ressubitem{Collaborate on a new application to help flesh out core use cases }
+        \ressubitem{Migrate new application from Zend-Db over to Doctrine: Code refactoring}
+        \ressubitem{Bug fix and maintain internal web applications}
+    \end{ressubsec}
 
-	\begin{ressubsec}{University of Wisconsin - Whitewater}{Whitewater, WI}{Web Developer / ResNet Support: Aug 2006--Dec 2007}
-		\ressubitem{Technologies used: Ajax, MySQL, PHP, Javascript, JSON, CVS, SVN and SQL Server}
-		\ressubitem{Collaborate on existing web applications to add new features which are used by the resident life faculty}
-		\ressubitem{Create new web applications to aid new student services}
-		\ressubitem{Support the Residential network for the students which include onsite computer help, network port testing, switchroom rewiring and enforcing network security}
-		\ressubitem{Support the Computer lab printer nework and printers}
-	\end{ressubsec}
-	
-%	\begin{ressubsec}{University of Wisconsin - Whitewater}{Whitewater, WI}{Computer Lab Assistant: Aug 2001--May 2002}
-%		\ressubitem{Help students with any computer question whether it be software or hardware}
-%		\ressubitem{Manage 100 computers operating on Windows 2000 and Mac OS X}
-%		\ressubitem{Manage and lightly maintained Hewlett Packard Laserjet 8000 printers}
-%	\end{ressubsec}
+    \begin{ressubsec}{Wolters Kluwer - ftwilliam.com}{Madison, WI}{Web Developer: Mar 2012 -- Sep 2012}
+        \ressubitem{\textit{Technologies used:} Ajax, Dojo, Active.js, jQuery, HTML, CSS, Perl, Python, MySQL, Redhat Linux, Virtualbox, Mercurial}
+        \ressubitem{Maintain Web application for Form 5500 filing with the Department of Labor using web services}
+        \ressubitem{Develop form Edit Test verification via ajax to ensure DOL acceptance}
+        \ressubitem{Implementation of updated schedules and attachments from IRS}
+    \end{ressubsec}
+
+    \begin{ressubsec}{HP Enterprise Services}{Madison, WI}{Web Developer: Jul 2010 -- Mar 2012}
+        \ressubitem{\textit{Technologies used:} Ajax, Ant, Java, JavaScript, HTML, CSS, PL/SQL, Oracle, OC4J, J2EE, Glassfish, XML/XSD/XSL/WSDL, SOAP, Eclipse, JDBC, JBOSS, Hibernate, Struts, JSP, CVS and SVN}
+        \ressubitem{Develop and maintain web applications for Immunization Registry of Minnesota}
+        \ressubitem{Data replication and Data Aggregation for Data Warehousing}
+        \ressubitem{Code refactoring to bring features from one registry to another}
+        \ressubitem{Implementation of new features and support of legacy systems}
+    \end{ressubsec}
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{ressubsec}{Wellbe LLC}{Madison, WI}{Applications Developer: Mar 2010 -- May 2010}
+        \ressubitem{\textit{Technologies used:} Ajax, PHP, MySQL, Apache, jQuery, CSS, SVN}
+        \ressubitem{Work in an agile, web start up company}
+        \ressubitem{Develop web based applications for customers}
+        \ressubitem{Maintain and implement solutions for current and future customers}
+    \end{ressubsec}
+
+    \begin{ressubsec}{Laker Software Inc.}{Sun Prairie, WI}{Software/Database Developer: Jan 2008 -- Dec 2009}
+        \ressubitem{\textit{Technologies used:} PL/SQL, Oracle 9i and 10g, C, C++, VB5, CVS}
+        \ressubitem{Pharmacy claim transaction reconciliation with Centers for Medicare Services}
+        \ressubitem{Explanation of benefits preparation for Medicare members}
+        \ressubitem{Data conversion to accomodate new customers or plan setups}
+        \ressubitem{Insurance plan retroactivity reconciliation}
+        \ressubitem{Linux administration on production servers}
+    \end{ressubsec}
+
+    \begin{ressubsec}{University of Wisconsin - Whitewater}{Whitewater, WI}{Web Developer / ResNet Support: Aug 2006 -- Dec 2007}
+        \ressubitem{\textit{Technologies used:} MySQL, PHP, JavaScript, CVS and SVN}
+        \ressubitem{Collaborate on existing web applications to add new features which are used by the resident life faculty}
+        \ressubitem{Create new web applications to aid new student services}
+        \ressubitem{Support the Residential network for the students which include onsite computer help, network port testing, switchroom rewiring and enforcing network security}
+        \ressubitem{Support the Computer lab printer nework and printers}
+    \end{ressubsec}
+
 \end{ressection}
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ressection}{Education}
 
-	\begin{ressubsec}{University of Wisconsin - Whitewater}{Whitewater, WI}{2007 alumnus}
-		\ressubitem{Major in Management of Computer Systems}
-		\ressubitem{Minor in Computer Science}
-	\end{ressubsec}
+    \begin{ressubsec}{University of Wisconsin - Whitewater}{Whitewater, WI}{2007 alumnus}
+        \ressubitem{Major in Management of Computer Systems}
+        \ressubitem{Minor in Computer Science}
+    \end{ressubsec}
 
 \end{ressection}
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{ressection}{Achievements and Activities}
-%
-%	\resitem{Owner of selfmadecycling.com \textit{2005--present} }
-%	\resitem{Team Manager for the University Wisconsin - Whitewater Cycling Team \textit{2000 - 2005}}
-%
-%\end{ressection}
-
 
 \end{document}
